@@ -4,7 +4,7 @@ export enum ProjectStatus {
 }
 
 export class Project {
-    private id: string;
+    id: string;
     title: string;
     description: string;
     people: number;

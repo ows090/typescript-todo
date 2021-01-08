@@ -1,6 +1,6 @@
 import ProjectInput from "./components/project-input";
-import { ProjectStatus } from "./models/project";
-import { ProjectState } from "./state/project-state";
+import { ProjectList } from "./components/project-list";
 console.log('start');
-const projectState = ProjectState.getInstance();
 new ProjectInput();
+new ProjectList('active');
+new ProjectList('finished');

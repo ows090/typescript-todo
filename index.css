@@ -33,3 +33,14 @@ body {
 .form-control input {
     flex: 1 1 0;
 }
+
+#active-area {
+    border : 3px solid blue;
+}
+#finished-area {
+    border : 3px solid red;
+}
+
+.drag-over {
+    background-color : rgb(250, 250, 226)
+}
