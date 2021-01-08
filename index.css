@@ -1,0 +1,35 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding : 0;
+    margin : 0;
+}
+
+#project-form {
+    border-bottom: 3px solid black;
+    padding : 1rem;
+}
+
+#project-form button {
+    display: block;
+    width : 80%;
+    margin: 1rem auto;
+    padding : 0.5rem;
+}
+
+.form-control {
+    display: flex;
+    margin-bottom: 0.2rem;
+}
+
+.form-control label {
+    width :  20%;
+    min-width: 82px;
+    text-align: center;
+}
+
+.form-control input {
+    flex: 1 1 0;
+}
