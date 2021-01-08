@@ -18,12 +18,24 @@ export class ProjectState extends State<Project[]> {
         return this.instance;
     }
 
-    addProject(project:Project){
+    addProject(project: Project) {
         this.state.push(project);
         this.fireListeners();
     }
 
-    getProjects(){
+    getProjects() {
         return this.state;
+    }
+
+    moveProject(projectId: string, targetStatus: ProjectStatus) {
+        const targetIdx = this.state.findIndex(
+            (project) => project.id === projectId
+        );
+        if (this.state[targetIdx].status === targetStatus) return;
+        this.state[targetIdx].status =
+            this.state[targetIdx].status === ProjectStatus.Active
+                ? ProjectStatus.Finished
+                : ProjectStatus.Active;
+        this.fireListeners();
     }
 }
